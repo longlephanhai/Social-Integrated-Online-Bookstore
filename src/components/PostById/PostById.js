@@ -75,10 +75,8 @@ const PostById = () => {
       body: JSON.stringify(user)
     })
     const responseData = await response.json()
-    console.log("json",responseData.data);
+    console.log("json", responseData.data);
     setDataPost(responseData.data)
-    
-    // setDataPost(responseData.data)
   }
   useEffect(() => {
     fetchData()
@@ -87,34 +85,34 @@ const PostById = () => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <div className='flex gap-4 bg-white p-4 rounded-[1rem]'>
-          <img className='rounded-full w-[3rem] h-[3rem] object-cover' src={user?.profilePic} alt='' />
+        <div className='flex flex-col sm:flex-row gap-4 bg-white p-4 rounded-[1rem]'>
+          <img className='hidden sm:block rounded-full w-[3rem] h-[3rem] sm:w-[4rem] sm:h-[4rem] object-cover' src={user?.profilePic} alt='' />
           <div className='flex flex-col w-[90%] gap-4'>
             <input
-              className='rounded-[10px] p-[10px] text-[17px] border-none outline-none bg-slate-200'
+              className='rounded-[10px] p-[10px] text-[15px] sm:text-[17px] border-none outline-none bg-slate-200 w-full'
               type='text'
               placeholder="What's happening"
               name='happen'
               onChange={handleOnchange}
               value={data?.desc}
             />
-            <div className='flex justify-around'>
-              <div className='p-[5px] px-[10px] rounded-[10px] flex items-center justify-center text-[12px] cursor-pointer text-green-600'
+            <div className='flex flex-wrap justify-around'>
+              <div className='p-[5px] px-[10px] rounded-[10px] flex items-center justify-center text-[12px] sm:text-[14px]  cursor-pointer text-green-600'
                 onClick={() => imageRef.current.click()} onChange={handleOnchange}
               >
-                <CiImageOn className='w-6 h-auto' />
+                <CiImageOn className='w-5 sm:w-6 h-auto' />
                 Photo
               </div>
-              <div className='p-[5px] px-[10px] rounded-[10px] flex items-center justify-center text-[12px] cursor-pointer text-blue-600'>
+              <div className='p-[5px] px-[10px] rounded-[10px] flex items-center justify-center text-[12px] sm:text-[14px] cursor-pointer text-blue-600'>
                 <BiSolidCaretRightCircle className='w-6 h-auto' />
                 Video
               </div>
-              <div className='p-[5px] px-[10px] rounded-[10px] flex items-center justify-center text-[12px] cursor-pointer
+              <div className='p-[5px] px-[10px] rounded-[10px] flex items-center justify-center text-[12px] sm:text-[14px] cursor-pointer
           text-red-600'>
                 <HiOutlineMapPin className='w-6 h-auto' />
                 Location
               </div>
-              <div className='p-[5px] px-[10px] rounded-[10px] flex items-center justify-center text-[12px] cursor-pointer
+              <div className='p-[5px] px-[10px] rounded-[10px] flex items-center justify-center text-[12px] sm:text-[14px]  cursor-pointer
           text-yellow-600'>
                 <FaRegCalendarAlt className='w-6 h-auto' />
                 Shedule

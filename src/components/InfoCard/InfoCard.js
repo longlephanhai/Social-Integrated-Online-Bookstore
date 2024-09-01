@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 const InfoCard = () => {
   const user = useSelector(state => state?.user?.user)
   return (
-    <div className='flex flex-col gap-3 bg-white p-4 rounded-2xl w-[90%]'>
+    <div className='md:flex flex-col gap-3 bg-white p-4 rounded-2xl w-[90%] hidden'>
       <div className='flex justify-between items-center'>
         <h4>Your Info</h4>
         <FaPen className='text-sm cursor-pointer' />

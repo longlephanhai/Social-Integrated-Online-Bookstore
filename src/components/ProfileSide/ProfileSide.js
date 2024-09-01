@@ -6,9 +6,9 @@ import FollowersCard from '../FollowersCard/FollowersCard'
 const ProfileSide = () => {
   return (
     <div className='flex flex-col gap-4 items-center overflow-auto'>
-      <LogoSearch/>
-      <ProfileCard/>
-      <FollowersCard/>
+      <LogoSearch />
+      <ProfileCard />
+      <FollowersCard />
     </div>
   )
 }
