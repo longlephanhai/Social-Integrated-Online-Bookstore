@@ -1,0 +1,37 @@
+.customShadow{
+    box-shadow:0px 0px 10px rgba(0,0,0,0.1)
+}
+
+.scrollbar-none::-webkit-scrollbar{
+    display:none
+}
+html {
+  scroll-behavior: smooth;
+}
+/* CSS */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* .skeleton-loading {
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+.hide-content {
+  animation: fade-out 0.5s ease-in forwards;
+} */
+ 
